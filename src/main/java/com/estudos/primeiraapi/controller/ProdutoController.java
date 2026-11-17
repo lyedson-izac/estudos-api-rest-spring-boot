@@ -23,4 +23,9 @@ public class ProdutoController {
         return new Produto(1, "mouse gamer", 150.0);
     }
 
+    @PostMapping
+    public String cadastrar (@RequestBody Produto produto) {
+        return "Produto recebido: " + produto.getNome();
+    }
+
 }
